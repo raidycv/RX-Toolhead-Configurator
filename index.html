@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="./src/style.css">
 </head>
 <body>
-<header><b>RX TOOLHEAD</b><span>CONFIGURATOR <small>V5.5 · V2.4</small></span><button id="reset">Reset</button></header>
+<header><b>RX TOOLHEAD</b><span>CONFIGURATOR <small>V5.5 · V3.0</small></span><button id="reset">Reset</button></header>
 <main>
 <aside>
   <h2>Build your RX</h2>
-  <p class="muted">V2 loads the real aligned RX V5.5 GLB. Configuration buttons remain in mapping mode until individual meshes are assigned.</p>
+  <p class="muted">V3 loads the RX V5.5 as named Shapr3D assemblies. Gear, carriage, probe and cutter selections now control logical model groups.</p>
   <div id="controls"></div>
   <div class="summary">
     <h3>Your configuration</h3><div id="summary"></div>
@@ -24,10 +24,10 @@
   <canvas id="viewer"></canvas>
   <div id="meshInfo">Click a part to identify its mesh ID</div>
   <div id="inspector">
-    <div class="inspector-title"><b>Mesh Inspector</b><span>Selected <strong id="selectedId">—</strong></span></div>
+    <div class="inspector-title"><b>Assembly Exploded View</b><span>Named groups</span></div>
     <label class="explode-label">Exploded view <span id="explodeValue">0.0×</span></label>
     <input id="explode" type="range" min="0" max="2.5" value="0" step="0.1">
-    <div class="inspect-actions"><button id="explodeOff">Assembled</button><button id="isolate">Isolate</button><button id="hideSelected">Hide</button><button id="restoreMeshes">Restore all</button></div>
+    <div class="inspect-actions single"><button id="explodeOff">Assembled</button></div>
   </div>
   <div class="toolbar"><button id="fit">Fit view</button><button id="wire">Wireframe</button></div>
 </section>

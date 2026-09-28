@@ -1,13 +1,13 @@
-# RX Toolhead Configurator V2.4 — Stable Exploded View
+# RX Toolhead Configurator V3.0
 
-Patch update for the existing V2/Draco deployment.
+V3 replaces the anonymous single master GLB with the 23 named Shapr3D first-level GLB assemblies.
 
-- Deterministic exploded-view slider (0–2.5x)
-- Every update starts from the original assembled mesh transform
-- No cumulative drift / runaway zoom
-- Camera remains independent; Fit View is manual
-- Mesh IDs remain unchanged
-- Assembled button restores exact original mesh positions
-- Inspector isolate/hide/restore remains available
+Current first-pass functional mapping:
+- H2S / A1 gear setup
+- MGN12H / MGN9 carriage
+- None / Cartographer-Beacon / BIQU MicroProbe
+- None / Static / Servo filament-cutter arm
+- Click any visible component to show its source assembly filename
+- Exploded view moves logical assemblies instead of individual raw meshes
 
-Copy `index.html` and the `src` folder over the existing repository. Keep the existing `assets/models/rx-v55-master.glb`.
+The mapping is deliberately conservative: assemblies whose dependency is not yet verified remain visible rather than being incorrectly hidden.
