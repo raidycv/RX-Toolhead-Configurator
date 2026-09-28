@@ -1,37 +1,11 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>RX Toolhead Configurator</title>
-  <link rel="stylesheet" href="./src/style.css">
-</head>
-<body>
-<header><b>RX TOOLHEAD</b><span>CONFIGURATOR <small>V5.5 · V3.0</small></span><button id="reset">Reset</button></header>
-<main>
-<aside>
-  <h2>Build your RX</h2>
-  <p class="muted">V3 loads the RX V5.5 as named Shapr3D assemblies. Gear, carriage, probe and cutter selections now control logical model groups.</p>
-  <div id="controls"></div>
-  <div class="summary">
-    <h3>Your configuration</h3><div id="summary"></div>
-    <button id="share">Copy configuration link</button>
-    <button id="download" class="primary">Download selected files</button>
-  </div>
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RX V5.5 Mapping Studio</title><link rel="stylesheet" href="./src/style.css"><script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}</script></head><body>
+<header><b>RX TOOLHEAD</b><span>MAPPING STUDIO</span><small>V5.5 · V4</small></header>
+<main><aside>
+<h2>Named assembly</h2><select id="assembly"></select><p class="hint">Reference GLBs are used only for shape/name matching. The aligned master stays the coordinate truth.</p>
+<div class="stats" id="stats">Loading…</div>
+<h3>Reference bodies</h3><div id="parts" class="parts"></div>
+<div class="actions"><button id="prev">◀ Candidate</button><button id="next">Candidate ▶</button><button id="confirm">Confirm selected</button><button id="auto">Confirm high confidence</button><button id="clear">Clear assembly</button><button id="export" class="accent">Export mapping.json</button></div>
+<div id="status" class="status">Loading master…</div>
 </aside>
-<section id="stage">
-  <div id="notice">Loading RX V5.5 master model…</div>
-  <canvas id="viewer"></canvas>
-  <div id="meshInfo">Click a part to identify its mesh ID</div>
-  <div id="inspector">
-    <div class="inspector-title"><b>Assembly Exploded View</b><span>Named groups</span></div>
-    <label class="explode-label">Exploded view <span id="explodeValue">0.0×</span></label>
-    <input id="explode" type="range" min="0" max="2.5" value="0" step="0.1">
-    <div class="inspect-actions single"><button id="explodeOff">Assembled</button></div>
-  </div>
-  <div class="toolbar"><button id="fit">Fit view</button><button id="wire">Wireframe</button></div>
-</section>
-</main>
-<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}</script>
-<script type="module" src="./src/main.js"></script>
-</body></html>
+<section class="views"><div class="view"><div class="viewtitle">ALIGNED MASTER <span>correct coordinates</span></div><div id="master"></div></div><div class="view ref"><div class="viewtitle">NAMED REFERENCE <span id="refname"></span></div><div id="reference"></div></div></section></main>
+<script type="module" src="./src/mapper.js"></script></body></html>

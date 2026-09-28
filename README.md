@@ -1,13 +1,14 @@
-# RX Toolhead Configurator V3.0
+# RX Toolhead V5.5 — V4 Mapping Studio
 
-V3 replaces the anonymous single master GLB with the 23 named Shapr3D first-level GLB assemblies.
+This is a mapping/verification build, not the final configurator.
 
-Current first-pass functional mapping:
-- H2S / A1 gear setup
-- MGN12H / MGN9 carriage
-- None / Cartographer-Beacon / BIQU MicroProbe
-- None / Static / Servo filament-cutter arm
-- Click any visible component to show its source assembly filename
-- Exploded view moves logical assemblies instead of individual raw meshes
+- `assets/models/rx-v55-master.glb` is the only coordinate truth.
+- `assets/reference/*.glb` are named Shapr3D exports used only as shape/color/size references.
+- The mapper compares decoded geometry using rotation-invariant bounding dimensions, triangle density and material color.
+- Select a named assembly, review the ranked master-mesh candidate for each reference body, and confirm it.
+- High-confidence matches can be accepted in bulk.
+- Mapping progress is stored in browser localStorage.
+- `Export mapping.json` downloads the confirmed map for integration into the final configurator.
+- Known validation: master mesh #39 is the servo.
 
-The mapping is deliberately conservative: assemblies whose dependency is not yet verified remain visible rather than being incorrectly hidden.
+No named reference GLB is used for final positioning.
