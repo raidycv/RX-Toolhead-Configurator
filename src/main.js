@@ -66,12 +66,21 @@ loader.load('./assets/models/rx-v55-master.glb', gltf=>{
     const b=new THREE.Box3().setFromObject(m);
     const c=b.getCenter(new THREE.Vector3());
     m.userData.rxWorldCenter=c.clone();
-    let dir=c.clone().sub(assemblyCenter);
-    if(dir.lengthSq()<1e-8){
-      const a=(i*2.399963229728653)% (Math.PI*2);
-      dir.set(Math.cos(a),((i%7)-3)/3,Math.sin(a));
+    let worldDir=c.clone().sub(assemblyCenter);
+    if(worldDir.lengthSq()<1e-8){
+      const a=(i*2.399963229728653)%(Math.PI*2);
+      worldDir.set(Math.cos(a),((i%7)-3)/3,Math.sin(a));
     }
-    m.userData.rxExplodeWorldDir=dir.normalize();
+    worldDir.normalize();
+    // Convert once, while the assembly is still in its original state.
+    // Never derive this again from an already-exploded transform.
+    const localDir=worldDir.clone();
+    if(m.parent){
+      const q=new THREE.Quaternion();
+      m.parent.getWorldQuaternion(q);
+      localDir.applyQuaternion(q.invert()).normalize();
+    }
+    m.userData.rxExplodeLocalDir=localDir;
   });
   document.querySelector('#notice').style.display='none';
   document.querySelector('#meshInfo').textContent=`Real RX master loaded · ${meshes.length} selectable meshes · click a part to identify it`;
@@ -117,19 +126,15 @@ document.querySelector('#reset').onclick=()=>{for(const g of groups)state[g.id]=
 document.querySelector('#download').onclick=()=>alert('Part downloads will activate after we finish mapping the selectable meshes.');
 
 function setExplosion(value){
-  explosion=Number(value)||0;
+  // Deterministic viewer-only exploded view. Every slider update starts from
+  // the original assembled local transform, so positions can never accumulate.
+  explosion=THREE.MathUtils.clamp(Number(value)||0,0,2.5);
   if(!master)return;
-  master.updateMatrixWorld(true);
-  const distance=assemblySize*0.42*explosion;
+  const distance=assemblySize*0.22*explosion;
   meshes.forEach(m=>{
-    const dir=m.userData.rxExplodeWorldDir.clone();
-    // Convert world-space direction into the mesh parent's local coordinate system.
-    if(m.parent){
-      const q=new THREE.Quaternion();
-      m.parent.getWorldQuaternion(q);
-      dir.applyQuaternion(q.invert());
-    }
-    m.position.copy(m.userData.rxOriginalPosition).addScaledVector(dir,distance);
+    const dir=m.userData.rxExplodeLocalDir;
+    m.position.copy(m.userData.rxOriginalPosition);
+    if(dir && explosion>0) m.position.addScaledVector(dir,distance);
   });
   master.updateMatrixWorld(true);
 }
@@ -142,7 +147,6 @@ document.querySelector('#isolate').onclick=()=>{
   if(!selectedMesh)return;
   meshes.forEach(m=>m.visible=(m===selectedMesh));
   document.querySelector('#meshInfo').textContent=`Isolated mesh #${selectedMesh.userData.rxMeshId}`;
-  fitView();
 };
 document.querySelector('#hideSelected').onclick=()=>{
   if(!selectedMesh)return;
@@ -155,5 +159,4 @@ document.querySelector('#hideSelected').onclick=()=>{
 document.querySelector('#restoreMeshes').onclick=()=>{
   meshes.forEach(m=>m.visible=true);
   document.querySelector('#meshInfo').textContent=`All ${meshes.length} meshes restored`;
-  fitView();
 };

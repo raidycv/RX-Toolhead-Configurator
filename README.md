@@ -1,18 +1,13 @@
-# RX Toolhead Configurator V2
+# RX Toolhead Configurator V2.4 — Stable Exploded View
 
-V2 loads the real aligned RX V5.5 Configurator Master Assembly exported from Shapr3D as GLB.
+Patch update for the existing V2/Draco deployment.
 
-## Current milestone
-- Real RX geometry in browser
-- 122 separate selectable meshes
-- Original GLB materials retained
-- Orbit / zoom / fit view
-- Click-to-identify mesh IDs for mapping
-- Shareable configuration state
+- Deterministic exploded-view slider (0–2.5x)
+- Every update starts from the original assembled mesh transform
+- No cumulative drift / runaway zoom
+- Camera remains independent; Fit View is manual
+- Mesh IDs remain unchanged
+- Assembled button restores exact original mesh positions
+- Inspector isolate/hide/restore remains available
 
-## Next milestone
-Map mesh IDs into common, H2S, A1, MGN12H, MGN9, Cartographer/Beacon, and MicroProbe groups. After that the controls will actually show/hide the correct geometry and printable downloads can be attached.
-
-
-## Draco web asset
-The master GLB is geometry-compressed with Draco (~22.8 MB). The viewer configures Three.js DRACOLoader from the jsDelivr-hosted Three.js decoder files.
+Copy `index.html` and the `src` folder over the existing repository. Keep the existing `assets/models/rx-v55-master.glb`.
