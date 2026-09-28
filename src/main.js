@@ -28,7 +28,8 @@ scene.add(new THREE.HemisphereLight(0xffffff,0x30343b,2.2));
 const key=new THREE.DirectionalLight(0xffffff,3.2); key.position.set(3,5,4); scene.add(key);
 const fill=new THREE.DirectionalLight(0xffffff,1.2); fill.position.set(-4,1,-3); scene.add(fill);
 
-let master=null, meshes=[], wire=false;
+let master=null, meshes=[], wire=false, selectedMesh=null, explosion=0;
+let assemblyCenter=new THREE.Vector3(), assemblySize=1;
 const dracoLoader=new DRACOLoader();
 dracoLoader.setDecoderPath('https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/libs/draco/');
 const loader=new GLTFLoader();
@@ -50,9 +51,27 @@ loader.load('./assets/models/rx-v55-master.glb', gltf=>{
   master.traverse(o=>{
     if(o.isMesh){
       o.userData.rxMeshId=meshes.length;
+      o.userData.rxOriginalPosition=o.position.clone();
       meshes.push(o);
       o.material=o.material.clone();
     }
+  });
+  // Cache each mesh's assembled world-space center and an explosion direction.
+  master.updateMatrixWorld(true);
+  const assemblyBox=new THREE.Box3().setFromObject(master);
+  assemblyBox.getCenter(assemblyCenter);
+  const assemblyDims=assemblyBox.getSize(new THREE.Vector3());
+  assemblySize=Math.max(assemblyDims.x,assemblyDims.y,assemblyDims.z);
+  meshes.forEach((m,i)=>{
+    const b=new THREE.Box3().setFromObject(m);
+    const c=b.getCenter(new THREE.Vector3());
+    m.userData.rxWorldCenter=c.clone();
+    let dir=c.clone().sub(assemblyCenter);
+    if(dir.lengthSq()<1e-8){
+      const a=(i*2.399963229728653)% (Math.PI*2);
+      dir.set(Math.cos(a),((i%7)-3)/3,Math.sin(a));
+    }
+    m.userData.rxExplodeWorldDir=dir.normalize();
   });
   document.querySelector('#notice').style.display='none';
   document.querySelector('#meshInfo').textContent=`Real RX master loaded · ${meshes.length} selectable meshes · click a part to identify it`;
@@ -74,10 +93,13 @@ canvas.addEventListener('pointerdown',e=>{
   const r=canvas.getBoundingClientRect();
   pointer.x=((e.clientX-r.left)/r.width)*2-1; pointer.y=-((e.clientY-r.top)/r.height)*2+1;
   raycaster.setFromCamera(pointer,camera);
-  const hit=raycaster.intersectObjects(meshes,false)[0];
-  if(hit){
-    const id=hit.object.userData.rxMeshId;
-    document.querySelector('#meshInfo').textContent=`Selected mesh #${id} · triangles: ${Math.round(hit.object.geometry.index ? hit.object.geometry.index.count/3 : hit.object.geometry.attributes.position.count/3).toLocaleString()}`;
+  const hits=raycaster.intersectObjects(meshes.filter(m=>m.visible),false);
+  if(hits.length){
+    selectedMesh=hits[0].object;
+    const id=selectedMesh.userData.rxMeshId;
+    const tris=Math.round(selectedMesh.geometry.index ? selectedMesh.geometry.index.count/3 : selectedMesh.geometry.attributes.position.count/3).toLocaleString();
+    document.querySelector('#meshInfo').textContent=`Selected mesh #${id} · triangles: ${tris} · ${hits.length} mesh hit${hits.length===1?'':'s'} under cursor`;
+    document.querySelector('#selectedId').textContent=`#${id}`;
   }
 });
 
@@ -93,3 +115,45 @@ document.querySelector('#wire').onclick=()=>{wire=!wire; meshes.forEach(m=>m.mat
 document.querySelector('#share').onclick=async()=>{await navigator.clipboard.writeText(location.href);alert('Configuration link copied')};
 document.querySelector('#reset').onclick=()=>{for(const g of groups)state[g.id]=g.default; location.search=new URLSearchParams(state)};
 document.querySelector('#download').onclick=()=>alert('Part downloads will activate after we finish mapping the selectable meshes.');
+
+function setExplosion(value){
+  explosion=Number(value)||0;
+  if(!master)return;
+  master.updateMatrixWorld(true);
+  const distance=assemblySize*0.42*explosion;
+  meshes.forEach(m=>{
+    const dir=m.userData.rxExplodeWorldDir.clone();
+    // Convert world-space direction into the mesh parent's local coordinate system.
+    if(m.parent){
+      const q=new THREE.Quaternion();
+      m.parent.getWorldQuaternion(q);
+      dir.applyQuaternion(q.invert());
+    }
+    m.position.copy(m.userData.rxOriginalPosition).addScaledVector(dir,distance);
+  });
+  master.updateMatrixWorld(true);
+}
+
+const explode=document.querySelector('#explode');
+const explodeValue=document.querySelector('#explodeValue');
+explode.oninput=()=>{explodeValue.textContent=`${Number(explode.value).toFixed(1)}×`;setExplosion(explode.value)};
+document.querySelector('#explodeOff').onclick=()=>{explode.value=0;explodeValue.textContent='0.0×';setExplosion(0)};
+document.querySelector('#isolate').onclick=()=>{
+  if(!selectedMesh)return;
+  meshes.forEach(m=>m.visible=(m===selectedMesh));
+  document.querySelector('#meshInfo').textContent=`Isolated mesh #${selectedMesh.userData.rxMeshId}`;
+  fitView();
+};
+document.querySelector('#hideSelected').onclick=()=>{
+  if(!selectedMesh)return;
+  const id=selectedMesh.userData.rxMeshId;
+  selectedMesh.visible=false;
+  selectedMesh=null;
+  document.querySelector('#selectedId').textContent='—';
+  document.querySelector('#meshInfo').textContent=`Hidden mesh #${id}`;
+};
+document.querySelector('#restoreMeshes').onclick=()=>{
+  meshes.forEach(m=>m.visible=true);
+  document.querySelector('#meshInfo').textContent=`All ${meshes.length} meshes restored`;
+  fitView();
+};
