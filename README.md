@@ -1,26 +1,18 @@
-# RX Toolhead Configurator
-Interactive web configurator for the RX Toolhead V5.5.
+# RX Toolhead Configurator V2
 
-## Current configuration groups discovered in the master STEP
-- H2S Extruder Gear system / Main Body for H2S Extruder gear
-- A1 gear setup parts / main body for A1 Gear
-- MGN12H carriage
-- MGN9 gantry / RX MGN9 carriage mount
-- Cartographer / Beacon + carto mount
-- BIQU MicroProbe carriage mount
+V2 loads the real aligned RX V5.5 Configurator Master Assembly exported from Shapr3D as GLB.
 
-The source STEP also contains electronics, hotend, fasteners, magnets, filament cutter, EBB36 setup and alternative parts. These will be classified as printable/configurable/reference hardware during the CAD cleanup pass.
+## Current milestone
+- Real RX geometry in browser
+- 122 separate selectable meshes
+- Original GLB materials retained
+- Orbit / zoom / fit view
+- Click-to-identify mesh IDs for mapping
+- Shareable configuration state
 
-## Run locally
-Because browser modules cannot reliably run from `file://`, use a small local server:
+## Next milestone
+Map mesh IDs into common, H2S, A1, MGN12H, MGN9, Cartographer/Beacon, and MicroProbe groups. After that the controls will actually show/hide the correct geometry and printable downloads can be attached.
 
-```bash
-python3 -m http.server 8000
-```
-Then open `http://localhost:8000`.
 
-## Model pipeline
-The browser uses lightweight `.glb` assets, while STEP remains the master CAD/download format. Export configurable groups from the same Shapr3D assembly **without moving them**, preserving the common origin. Put the resulting GLBs in `assets/models/` with the names referenced in `src/config.js`.
-
-## GitHub Pages
-After pushing this repository to GitHub, go to Settings > Pages > Build and deployment > Deploy from a branch, select `main` and `/ (root)`, then Save.
+## Draco web asset
+The master GLB is geometry-compressed with Draco (~22.8 MB). The viewer configures Three.js DRACOLoader from the jsDelivr-hosted Three.js decoder files.

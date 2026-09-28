@@ -1,1 +1,31 @@
-<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>RX Toolhead Configurator</title><link rel='stylesheet' href='./src/style.css'></head><body><header><b>RX TOOLHEAD</b><span>CONFIGURATOR <small>V5.5</small></span><button id='reset'>Reset</button></header><main><aside><h2>Build your RX</h2><p class='muted'>Choose your hardware. The 3D view updates automatically.</p><div id='controls'></div><div class='summary'><h3>Your configuration</h3><div id='summary'></div><button id='share'>Copy configuration link</button><button id='download' class='primary'>Download selected files</button></div></aside><section id='stage'><div id='notice'>3D assets are being prepared from the V5.5 master STEP.</div><canvas id='viewer'></canvas><div class='toolbar'><button id='fit'>Fit view</button><button id='explode'>Exploded view</button></div></section></main><script type='importmap'>{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}</script><script type='module' src='./src/main.js'></script></body></html>
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RX Toolhead Configurator</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+<header><b>RX TOOLHEAD</b><span>CONFIGURATOR <small>V5.5 · V2</small></span><button id="reset">Reset</button></header>
+<main>
+<aside>
+  <h2>Build your RX</h2>
+  <p class="muted">V2 loads the real aligned RX V5.5 GLB. Configuration buttons remain in mapping mode until individual meshes are assigned.</p>
+  <div id="controls"></div>
+  <div class="summary">
+    <h3>Your configuration</h3><div id="summary"></div>
+    <button id="share">Copy configuration link</button>
+    <button id="download" class="primary">Download selected files</button>
+  </div>
+</aside>
+<section id="stage">
+  <div id="notice">Loading RX V5.5 master model…</div>
+  <canvas id="viewer"></canvas>
+  <div id="meshInfo">Click a part to identify its mesh ID</div>
+  <div class="toolbar"><button id="fit">Fit view</button><button id="wire">Wireframe</button></div>
+</section>
+</main>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}</script>
+<script type="module" src="./src/main.js"></script>
+</body></html>
