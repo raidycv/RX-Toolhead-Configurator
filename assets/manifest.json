@@ -1,0 +1,322 @@
+[
+  {
+    "source": "Pen Plotter Module/Pen Plotter.stl",
+    "stl": "Pen Plotter Module/Pen Plotter Module.stl",
+    "glb": "Pen Plotter Module/Pen Plotter Module.glb",
+    "stlBytes": 2037134,
+    "glbBytes": 1956896,
+    "status": "ok"
+  },
+  {
+    "source": "UNIVERSAL in common Parts /RX-H2S&A1 Gear toolhead 5015 V5.5.2 3.stl.stl",
+    "stl": "Common Parts - UNIVERSAL/RX-H2S&A1 Gear toolhead 5015 V5.5.2 3.stl",
+    "glb": "Common Parts - UNIVERSAL/RX-H2S&A1 Gear toolhead 5015 V5.5.2 3.glb",
+    "stlBytes": 1745684,
+    "glbBytes": 1677228,
+    "status": "ok"
+  },
+  {
+    "source": "UNIVERSAL in common Parts /duct.stl",
+    "stl": "Common Parts - UNIVERSAL/Part Cooling Duct.stl",
+    "glb": "Common Parts - UNIVERSAL/Part Cooling Duct.glb",
+    "stlBytes": 875384,
+    "glbBytes": 841608,
+    "status": "ok"
+  },
+  {
+    "source": "UNIVERSAL in common Parts /Front cover clips.stl",
+    "stl": "Common Parts - UNIVERSAL/Front Cover Clips.stl",
+    "glb": "Common Parts - UNIVERSAL/Front Cover Clips.glb",
+    "stlBytes": 4879684,
+    "glbBytes": 4685772,
+    "status": "ok"
+  },
+  {
+    "source": "UNIVERSAL in common Parts /RX-H2S&A1 Gear toolhead 5015 V5.5 7.stl.stl",
+    "stl": "Common Parts - UNIVERSAL/RX-H2S&A1 Gear toolhead 5015 V5.5 7.stl",
+    "glb": "Common Parts - UNIVERSAL/RX-H2S&A1 Gear toolhead 5015 V5.5 7.glb",
+    "stlBytes": 2075984,
+    "glbBytes": 1994308,
+    "status": "ok"
+  },
+  {
+    "source": "UNIVERSAL in common Parts /Logo Transparent print.stl",
+    "stl": "Common Parts - UNIVERSAL/Logo - Transparent Print.stl",
+    "glb": "Common Parts - UNIVERSAL/Logo - Transparent Print.glb",
+    "stlBytes": 103284,
+    "glbBytes": 100404,
+    "status": "ok"
+  },
+  {
+    "source": "UNIVERSAL in common Parts /Back Electronics housing_1.stl",
+    "stl": "Common Parts - UNIVERSAL/Back Electronics Housing.stl",
+    "glb": "Common Parts - UNIVERSAL/Back Electronics Housing.glb",
+    "stlBytes": 961784,
+    "glbBytes": 924616,
+    "status": "ok"
+  },
+  {
+    "source": "Filament Depressor (optional)/Servo motorized Depressor/FIlament Cutter depressor Servo motor.stl",
+    "stl": "Filament Depressor (optional)/Servo Motorized Depressor/Filament Depressor - Servo Motorized.stl",
+    "glb": "Filament Depressor (optional)/Servo Motorized Depressor/Filament Depressor - Servo Motorized.glb",
+    "stlBytes": 2567684,
+    "glbBytes": 2466288,
+    "status": "ok"
+  },
+  {
+    "source": "Filament Depressor (optional)/Static depressor/Right screw mount/FIlament Cutter depressor right screws.stl",
+    "stl": "Filament Depressor (optional)/Static Depressor/Right Screw Mount/Filament Depressor - Static Right.stl",
+    "glb": "Filament Depressor (optional)/Static Depressor/Right Screw Mount/Filament Depressor - Static Right.glb",
+    "stlBytes": 1861984,
+    "glbBytes": 1788832,
+    "status": "ok"
+  },
+  {
+    "source": "Filament Depressor (optional)/Static depressor/Left screw mount /FIlament Cutter depressor left screws.stl",
+    "stl": "Filament Depressor (optional)/Static Depressor/Left Screw Mount/Filament Depressor - Static Left.stl",
+    "glb": "Filament Depressor (optional)/Static Depressor/Left Screw Mount/Filament Depressor - Static Left.glb",
+    "stlBytes": 1857084,
+    "glbBytes": 1784124,
+    "status": "ok"
+  },
+  {
+    "source": "Main Body/Single print main body /For A1 gear setup/Main Body for A1 setup .stl",
+    "stl": "Main Body/Single-Print Main Body/For A1 Gear Setup/Main Body - A1 Setup.stl",
+    "glb": "Main Body/Single-Print Main Body/For A1 Gear Setup/Main Body - A1 Setup.glb",
+    "stlBytes": 3662434,
+    "glbBytes": 3517232,
+    "status": "ok"
+  },
+  {
+    "source": "Main Body/Single print main body /For H2S setup/Main Body for H2S setup .stl",
+    "stl": "Main Body/Single-Print Main Body/For H2S Setup/Main Body - H2S Setup.stl",
+    "glb": "Main Body/Single-Print Main Body/For H2S Setup/Main Body - H2S Setup.glb",
+    "stlBytes": 4580284,
+    "glbBytes": 4398376,
+    "status": "ok"
+  },
+  {
+    "source": "Main Body/Main body Hybrid  /A1 Gear Hybrid body /A1 gear Hibrid body Setup.stl",
+    "stl": "Main Body/Hybrid Main Body/A1 Gear Hybrid Body/A1 Gear Hybrid Body Setup.stl",
+    "glb": "Main Body/Hybrid Main Body/A1 Gear Hybrid Body/A1 Gear Hybrid Body Setup.glb",
+    "stlBytes": 3794034,
+    "glbBytes": 3643548,
+    "status": "ok"
+  },
+  {
+    "source": "Main Body/Main body Hybrid  / body Left side /Hybrid machined part left side.stl.stl",
+    "stl": "Main Body/Hybrid Main Body/Left Side/Hybrid Machined Part - Left Side.stl",
+    "glb": "Main Body/Hybrid Main Body/Left Side/Hybrid Machined Part - Left Side.glb",
+    "stlBytes": 483084,
+    "glbBytes": 464720,
+    "status": "ok"
+  },
+  {
+    "source": "Main Body/Main body Hybrid  / body Left side /Hybrid main body left side.stl",
+    "stl": "Main Body/Hybrid Main Body/Left Side/Hybrid Main Body - Left Side.stl",
+    "glb": "Main Body/Hybrid Main Body/Left Side/Hybrid Main Body - Left Side.glb",
+    "stlBytes": 4712184,
+    "glbBytes": 4525028,
+    "status": "ok"
+  },
+  {
+    "source": "Main Body/Main body Hybrid  / body RIght side /Hybrid Body for h2d right heating assembly (recommended).stl",
+    "stl": "Main Body/Hybrid Main Body/Right Side/Hybrid Main Body - H2D Right Heating Assembly (Recommended).stl",
+    "glb": "Main Body/Hybrid Main Body/Right Side/Hybrid Main Body - H2D Right Heating Assembly (Recommended).glb",
+    "stlBytes": 3238784,
+    "glbBytes": 3110632,
+    "status": "ok"
+  },
+  {
+    "source": "Main Body/Main body Hybrid  / body RIght side /Body for H2D Right heating assembly_ (recommended).stl",
+    "stl": "Main Body/Hybrid Main Body/Right Side/Main Body - H2D Right Heating Assembly (Recommended).stl",
+    "glb": "Main Body/Hybrid Main Body/Right Side/Main Body - H2D Right Heating Assembly (Recommended).glb",
+    "stlBytes": 262884,
+    "glbBytes": 253720,
+    "status": "ok"
+  },
+  {
+    "source": "Connectors /PG7  connector /PUG cable mount (EBB 36 1.2 ).stl",
+    "stl": "Cable Connector/PG7 Connector/PG7 cable mount (EBB36 1.2 ).stl",
+    "glb": "Cable Connector/PG7 Connector/PG7 cable mount (EBB36 1.2 ).glb",
+    "stlBytes": 1536184,
+    "glbBytes": 1476016,
+    "status": "ok"
+  },
+  {
+    "source": "Connectors /XT30 Connector mount/X30 connector.stl",
+    "stl": "Cable Connector/XT30 Connector Mount/XT30 connector.stl",
+    "glb": "Cable Connector/XT30 Connector Mount/XT30 connector.glb",
+    "stlBytes": 2069384,
+    "glbBytes": 1987864,
+    "status": "ok"
+  },
+  {
+    "source": "Connectors /XT30 Connector mount/for EBB36 GEN2  Toolboard.stl",
+    "stl": "Cable Connector/XT30 Connector Mount/XT30 Mount - EBB36 Gen 2 Toolboard.stl",
+    "glb": "Cable Connector/XT30 Connector Mount/XT30 Mount - EBB36 Gen 2 Toolboard.glb",
+    "stlBytes": 1905184,
+    "glbBytes": 1830284,
+    "status": "ok"
+  },
+  {
+    "source": "Connectors /Drag Chain/drag chain.stl",
+    "stl": "Cable Connector/Drag Chain/Drag Chain.stl",
+    "glb": "Cable Connector/Drag Chain/Drag Chain.glb",
+    "stlBytes": 6594784,
+    "glbBytes": 6332244,
+    "status": "ok"
+  },
+  {
+    "source": "Electronic back cover /Longer Normal back cover (if need more space for cable)/Longer back electronic (if need more space for cable).stl",
+    "stl": "Electronic Back Cover/Longer Normal back cover (if need more space for cable)/Longer Electronic Back Cover.stl",
+    "glb": "Electronic Back Cover/Longer Normal back cover (if need more space for cable)/Longer Electronic Back Cover.glb",
+    "stlBytes": 1510884,
+    "glbBytes": 1451820,
+    "status": "ok"
+  },
+  {
+    "source": "Extruder gear box/Dual sensor/A1 extruder /extruder gear box for Dual Filament sensor (A1 Gear).stl",
+    "stl": "Extruder Gearbox/Dual Filament Sensor/A1 Extruder/Extruder Gearbox - Dual Filament Sensor - A1.stl",
+    "glb": "Extruder Gearbox/Dual Filament Sensor/A1 Extruder/Extruder Gearbox - Dual Filament Sensor - A1.glb",
+    "stlBytes": 3454484,
+    "glbBytes": 3317688,
+    "status": "ok"
+  },
+  {
+    "source": "Extruder gear box/Dual sensor/H2S Extruder/extruder gear box for Dual Filament sensor (H2S Gear).stl",
+    "stl": "Extruder Gearbox/Dual Filament Sensor/H2S Extruder/Extruder Gearbox - Dual Filament Sensor - H2S.stl",
+    "glb": "Extruder Gearbox/Dual Filament Sensor/H2S Extruder/Extruder Gearbox - Dual Filament Sensor - H2S.glb",
+    "stlBytes": 2627484,
+    "glbBytes": 2523768,
+    "status": "ok"
+  },
+  {
+    "source": "Extruder gear box/Standar Extruder Gear Box/For A1 Gear/A1 standard Extruder gear box.stl",
+    "stl": "Extruder Gearbox/Standard Extruder Gearbox/For A1 Gear/A1 Standard Extruder Gearbox.stl",
+    "glb": "Extruder Gearbox/Standard Extruder Gearbox/For A1 Gear/A1 Standard Extruder Gearbox.glb",
+    "stlBytes": 2034884,
+    "glbBytes": 1954780,
+    "status": "ok"
+  },
+  {
+    "source": "Extruder gear box/Standar Extruder Gear Box/For H2S gear /H2S standard Extruder gear box.stl",
+    "stl": "Extruder Gearbox/Standard Extruder Gearbox/For H2S Gear/H2S Standard Extruder Gearbox.stl",
+    "glb": "Extruder Gearbox/Standard Extruder Gearbox/For H2S Gear/H2S Standard Extruder Gearbox.glb",
+    "stlBytes": 2630584,
+    "glbBytes": 2526656,
+    "status": "ok"
+  },
+  {
+    "source": "Extruder gear box/OZNLAB sensor/A1 gear box for OZNLAB sensor/OZNLAB A1 extruder box .stl",
+    "stl": "Extruder Gearbox/OZN Lab Sensor/A1 gear box for OZNLAB sensor/OZN Lab A1 Extruder Gearbox.stl",
+    "glb": "Extruder Gearbox/OZN Lab Sensor/A1 gear box for OZNLAB sensor/OZN Lab A1 Extruder Gearbox.glb",
+    "stlBytes": 2411784,
+    "glbBytes": 2316580,
+    "status": "ok"
+  },
+  {
+    "source": "Extruder gear box/OZNLAB sensor/H2S gear box for OZNLAB sensor/OZNLAB  H2S Right heating assembly Recommended.stl",
+    "stl": "Extruder Gearbox/OZN Lab Sensor/H2S gear box for OZNLAB sensor/OZN Lab H2S - H2D Right Heating Assembly (Recommended).stl",
+    "glb": "Extruder Gearbox/OZN Lab Sensor/H2S gear box for OZNLAB sensor/OZN Lab H2S - H2D Right Heating Assembly (Recommended).glb",
+    "stlBytes": 3009984,
+    "glbBytes": 2890944,
+    "status": "ok"
+  },
+  {
+    "source": "Probe/Micro Probe/carriage mount for BIQU microprobe.stl",
+    "stl": "Probe/BIQU MicroProbe/Carriage Mount for BIQU MicroProbe.stl",
+    "glb": "Probe/BIQU MicroProbe/Carriage Mount for BIQU MicroProbe.glb",
+    "stlBytes": 1849784,
+    "glbBytes": 1777104,
+    "status": "ok"
+  },
+  {
+    "source": "Probe/Micro Probe/Probe Shield (Eddy  Micro Probe).stl",
+    "stl": "Probe/BIQU MicroProbe/Probe Shield (Eddy - MicroProbe).stl",
+    "glb": "Probe/BIQU MicroProbe/Probe Shield (Eddy - MicroProbe).glb",
+    "stlBytes": 295184,
+    "glbBytes": 284668,
+    "status": "ok"
+  },
+  {
+    "source": "Probe/BTT Eddy Probe Shield/Probe Shield (Eddy  Micro Probe).stl",
+    "stl": "Probe/BTT Eddy Probe Shield/Probe Shield (Eddy - MicroProbe).stl",
+    "glb": "Probe/BTT Eddy Probe Shield/Probe Shield (Eddy - MicroProbe).glb",
+    "stlBytes": 295184,
+    "glbBytes": 284668,
+    "status": "ok"
+  },
+  {
+    "source": "Probe/Beacon; Cartographer; Mellow Fly Eddy;/cartographer probe mount.stl",
+    "stl": "Probe/Beacon - Cartographer - Mellow FLY Eddy/Cartographer Probe Mount.stl",
+    "glb": "Probe/Beacon - Cartographer - Mellow FLY Eddy/Cartographer Probe Mount.glb",
+    "stlBytes": 400684,
+    "glbBytes": 385924,
+    "status": "ok"
+  },
+  {
+    "source": "Heating Assembly /Printed Mount Old-style Bambu Lab X1C hotend/Mount for TZ old style bambu hotends.stl",
+    "stl": "Heating Assembly/Printed Mount - Old-Style Bambu Lab X1C Hotend/Printed Mount - Old-Style Bambu Lab X1C Hotend.stl",
+    "glb": "Heating Assembly/Printed Mount - Old-Style Bambu Lab X1C Hotend/Printed Mount - Old-Style Bambu Lab X1C Hotend.glb",
+    "stlBytes": 234584,
+    "glbBytes": 226516,
+    "status": "ok"
+  },
+  {
+    "source": "Carriage/MGN9 Linear Rails Front Mount/Carriage for MGN9MM  rails .stl",
+    "stl": "Carriage/MGN9 Linear Rails Front Mount/MGN9 Linear Rails Front Mount Carriage.stl",
+    "glb": "Carriage/MGN9 Linear Rails Front Mount/MGN9 Linear Rails Front Mount Carriage.glb",
+    "stlBytes": 1781784,
+    "glbBytes": 1711800,
+    "status": "ok"
+  },
+  {
+    "source": "Carriage/ Voron MGN12 \u2014 6:9 mm belt/MGN12H  carriage.stl",
+    "stl": "Carriage/Voron MGN12 - 6-9 mm Belt/Voron MGN12 Carriage.stl",
+    "glb": "Carriage/Voron MGN12 - 6-9 mm Belt/Voron MGN12 Carriage.glb",
+    "stlBytes": 1923684,
+    "glbBytes": 1847976,
+    "status": "ok"
+  },
+  {
+    "source": "Carriage/SV08 MGN12 \u2014 6:9 mm belt/SV08 Carriage.stl",
+    "stl": "Carriage/SV08 MGN12 - 6-9 mm Belt/SV08 MGN12 Carriage.stl",
+    "glb": "Carriage/SV08 MGN12 - 6-9 mm Belt/SV08 MGN12 Carriage.glb",
+    "stlBytes": 1915484,
+    "glbBytes": 1840096,
+    "status": "ok"
+  },
+  {
+    "source": "Carriage/Monolith MGN12 \u2014 6:9 mm belt/Monolith Gantry carriage.stl",
+    "stl": "Carriage/Monolith MGN12 - 6-9 mm Belt/Monolith MGN12 Gantry Carriage.stl",
+    "glb": "Carriage/Monolith MGN12 - 6-9 mm Belt/Monolith MGN12 Gantry Carriage.glb",
+    "stlBytes": 2612684,
+    "glbBytes": 2509448,
+    "status": "ok"
+  },
+  {
+    "source": "Front Cover /Single-color Print + Glue/front cover accent color ring.stl",
+    "stl": "Front Cover/Single-color Print + Glue/Front Cover Accent Color Ring.stl",
+    "glb": "Front Cover/Single-color Print + Glue/Front Cover Accent Color Ring.glb",
+    "stlBytes": 287484,
+    "glbBytes": 277288,
+    "status": "ok"
+  },
+  {
+    "source": "Front Cover /Single-color Print + Glue/front cover_1.stl",
+    "stl": "Front Cover/Single-color Print + Glue/Front Cover.stl",
+    "glb": "Front Cover/Single-color Print + Glue/Front Cover.glb",
+    "stlBytes": 4880284,
+    "glbBytes": 4686332,
+    "status": "ok"
+  },
+  {
+    "source": "Front Cover /AMS Dual-color Print/AMS Dual-color Print.stl",
+    "stl": "Front Cover/AMS Dual-color Print/AMS Dual-Color Front Cover.stl",
+    "glb": "Front Cover/AMS Dual-color Print/AMS Dual-Color Front Cover.glb",
+    "stlBytes": 4880284,
+    "glbBytes": 4686324,
+    "status": "ok"
+  }
+]

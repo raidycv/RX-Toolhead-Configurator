@@ -1,14 +1,10 @@
-# RX Toolhead V5.5 — V4 Mapping Studio
+# RX Toolhead V5.5 — STL Wizard Prototype
 
-This is a mapping/verification build, not the final configurator.
+- 40 uploaded STL files cleaned and retained for download.
+- The same 40 parts converted to GLB for browser preview.
+- `Common Parts - UNIVERSAL` is always included by default.
+- The supplied RX toolhead photo is used only as a very faint background (5.5% opacity + dark overlay). The second supplied image is not used on the site.
+- Some wizard choices do not yet have an uploaded STL. They are kept in the UI so the final configuration structure is already established.
+- `assets/manifest.json` records every original filename and its corrected STL/GLB path.
 
-- `assets/models/rx-v55-master.glb` is the only coordinate truth.
-- `assets/reference/*.glb` are named Shapr3D exports used only as shape/color/size references.
-- The mapper compares decoded geometry using rotation-invariant bounding dimensions, triangle density and material color.
-- Select a named assembly, review the ranked master-mesh candidate for each reference body, and confirm it.
-- High-confidence matches can be accepted in bulk.
-- Mapping progress is stored in browser localStorage.
-- `Export mapping.json` downloads the confirmed map for integration into the final configurator.
-- Known validation: master mesh #39 is the servo.
-
-No named reference GLB is used for final positioning.
+Next: map each wizard choice to its exact STL/GLB file(s), add compatibility/dependency rules, color customization, and selected-file ZIP generation.
